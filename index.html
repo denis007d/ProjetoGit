@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFCE Locker - Achados e Perdidos Inteligente</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tailwind (para a fonte Inter) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Importar a fonte Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo para a fonte Inter ser o padrão */
+        body {
+            font-family: 'Inter', 'sans-serif';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Cabeçalho (Header) -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-600">
+                IFCE Locker 🔎
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#problema" class="text-gray-600 hover:text-green-600 transition duration-300">O Problema</a>
+                <a href="#solucao" class="text-gray-600 hover:text-green-600 transition duration-300">A Solução</a>
+                <a href="#seguranca" class="text-gray-600 hover:text-green-600 transition duration-300">Segurança</a>
+                <a href="#futuro" class="text-gray-600 hover:text-green-600 transition duration-300">O Futuro</a>
+            </div>
+            <a href="#solucao"
+                class="hidden md:block bg-green-600 text-white px-5 py-2 rounded-full font-semibold shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-105">
+                Ver Protótipo
+            </a>
+        </nav>
+    </header>
+
+    <!-- Seção 1: Herói (O Gancho) -->
+    <main>
+        <section id="inicio"
+            class="container mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center animate-fade-in-up">
+            <div class="md:w-1/2 lg:w-3/5 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-6">
+                    Perdeu? Achou? <br class="hidden md:block"><span
+                        class="text-green-600">Deu Match.</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-lg">
+                    IFCE Locker é a plataforma inteligente de achados e perdidos que usa tecnologia para reconectar você
+                    aos seus pertences.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#solucao"
+                        class="bg-green-600 text-white px-8 py-3 rounded-full font-bold text-lg shadow-xl hover:bg-green-700 transition duration-300 transform hover:scale-105">
+                        Como Funciona
+                    </a>
+                    <a href="#problema"
+                        class="bg-gray-200 text-gray-800 px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-gray-300 transition duration-300">
+                        Entenda o Problema
+                    </a>
+                </div>
+            </div>
+            <!-- Mockup Visual do Protótipo -->
+            <div class="md:w-1/2 lg:w-2/5 flex justify-center">
+                <div
+                    class="bg-white p-4 rounded-3xl shadow-2xl border-4 border-gray-900 w-72 transform rotate-3">
+                    <div class="bg-gray-900 h-6 rounded-t-lg flex items-center justify-center">
+                        <div class="w-2 h-2 bg-gray-700 rounded-full"></div>
+                    </div>
+                    <div class="bg-gray-50 rounded-b-xl p-6 h-96 flex flex-col items-center justify-center">
+                        <span class="text-5xl mb-4">🎉</span>
+                        <h3 class="text-xl font-bold text-gray-900 text-center">Match Encontrado!</h3>
+                        <div
+                            class="my-4 w-32 h-32 rounded-full border-8 border-green-500 bg-green-100 flex items-center justify-center">
+                            <span class="text-4xl font-black text-green-600">85%</span>
+                        </div>
+                        <p class="text-gray-600 text-center text-sm mb-4">
+                            Baseado em: Tipo, Cor e Localização.
+                        </p>
+                        <button
+                            class="w-full bg-green-600 text-white py-3 rounded-full font-bold shadow-lg hover:bg-green-700 transition duration-300">
+                            Validar Item
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: O Problema (A Dor Real) -->
+        <section id="problema" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-green-600 font-semibold tracking-wide uppercase">A Dor Real</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">O Caos dos Achados e Perdidos Hoje
+                    </h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                        No IFCE, perder algo gera um ciclo de frustração, tempo perdido e informações desencontradas.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1: Caos -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-100">
+                        <svg class="w-12 h-12 text-green-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                            </path>
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-3">Caos da Informação</h3>
+                        <p class="text-gray-600">
+                            Grupos de WhatsApp lotados, murais físicos desatualizados e informações desencontradas entre
+                            coordenações e a portaria.
+                        </p>
+                    </div>
+                    <!-- Card 2: Tempo Perdido -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-100">
+                        <svg class="w-12 h-12 text-green-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-3">Tempo Perdido</h3>
+                        <p class="text-gray-600">
+                            Alunos e servidores perdem horas de estudo e trabalho circulando pelo campus em busca de um
+                            item, muitas vezes sem sucesso.
+                        </p>
+                    </div>
+                    <!-- Card 3: Risco Real -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-100">
+                        <svg class="w-12 h-12 text-green-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                            </path>
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-3">Risco e Prejuízo</h3>
+                        <p class="text-gray-600">
+                            Itens de valor, como pendrives com TCCs, documentos ou equipamentos caros, são perdidos
+                            permanentemente, causando grande prejuízo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: A Solução (O "Match Engine") -->
+        <section id="solucao" class="bg-gray-50 py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-green-600 font-semibold tracking-wide uppercase">Nossa Solução</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">O "IFCE Match Engine"</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                        Não somos apenas uma lista. Somos um motor de similaridade que conecta as pessoas certas de forma
+                        inteligente.
+                    </p>
+                </div>
+                <!-- Fluxo do Algoritmo -->
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
+                    <!-- Passo 1: Perdido -->
+                    <div class="bg-white p-6 rounded-xl shadow-xl text-center w-72 border border-gray-200">
+                        <h3 class="font-bold text-xl mb-2">Item Perdido</h3>
+                        <p class="text-sm text-gray-600">O aluno cadastra:</p>
+                        <ul class="text-left text-gray-700 mt-3 space-y-1 list-disc list-inside">
+                            <li>Tipo (Ex: Pendrive)</li>
+                            <li>Cor (Ex: Preto)</li>
+                            <li>Local (Ex: Bloco A)</li>
+                            <li class="font-bold text-green-600">Detalhe Exclusivo (Privado)</li>
+                        </ul>
+                    </div>
+                    <!-- Seta/Processo -->
+                    <div class="text-green-600">
+                        <svg class="w-16 h-16 md:rotate-0 rotate-90" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </div>
+                    <!-- Passo 2: Algoritmo -->
+                    <div
+                        class="bg-green-600 text-white p-6 rounded-xl shadow-2xl text-center w-72 border-4 border-green-700 transform scale-105">
+                        <h3 class="font-bold text-xl mb-2">IFCE Match Engine</h3>
+                        <p class="text-sm text-green-100">O algoritmo calcula o *score* de similaridade baseado em pesos:
+                        </p>
+                        <ul class="text-left mt-3 space-y-1 list-disc list-inside">
+                            <li>Tipo: 40%</li>
+                            <li>Cor: 25%</li>
+                            <li>Local: 20%</li>
+                            <li>Detalhes: 15%</li>
+                        </ul>
+                    </div>
+                    <!-- Seta/Processo -->
+                    <div class="text-green-600">
+                        <svg class="w-16 h-16 md:rotate-0 rotate-90" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </div>
+                    <!-- Passo 3: Encontrado -->
+                    <div class="bg-white p-6 rounded-xl shadow-xl text-center w-72 border border-gray-200">
+                        <h3 class="font-bold text-xl mb-2">Item Encontrado</h3>
+                        <p class="text-sm text-gray-600">Outro aluno cadastra:</p>
+                        <ul class="text-left text-gray-700 mt-3 space-y-1 list-disc list-inside">
+                            <li>Tipo (Ex: Pendrive)</li>
+                            <li>Cor (Ex: Preto)</li>
+                            <li>Local (Ex: Biblioteca)</li>
+                            <li>Detalhes Visíveis</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Resultado -->
+                <div class="text-center mt-12">
+                    <h4 class="text-2xl font-bold text-gray-900">Resultado: Match de 85%</h4>
+                    <p class="text-lg text-gray-600 mt-2">
+                        Se o *score* for > 80%, o sistema notifica as duas partes para iniciarem a validação.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Segurança (O "Pulo do Gato") -->
+        <section id="seguranca" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <span class="text-green-600 font-semibold tracking-wide uppercase">O Pulo do Gato</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">Validação Anti-Fraude</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Como garantir que a pessoa certa receba o item? Simples: usando o "Detalhe Exclusivo" como uma
+                        senha de segurança.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 bg-green-600 text-white font-bold rounded-full flex items-center justify-center mr-4">1</span>
+                            <p class="text-gray-700">O dono cadastra um **Detalhe Exclusivo** (Ex: "adesivo do Batman no
+                                verso"). Este campo é **privado** e o sistema não o revela.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 bg-green-600 text-white font-bold rounded-full flex items-center justify-center mr-4">2</span>
+                            <p class="text-gray-700">Após o *match* de 80%, o sistema instrui quem achou: **"NÃO
+                                ENTREGUE. Peça ao suposto dono para descrever o Detalhe Exclusivo."**</p>
+                        </div>
+                        <div class="flex items-start">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 bg-green-600 text-white font-bold rounded-full flex items-center justify-center mr-4">3</span>
+                            <p class="text-gray-700">Apenas o dono verdadeiro saberá a resposta. É uma validação humana,
+                                simples e 100% segura.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- Visual de Segurança -->
+                    <div class="bg-gray-50 rounded-xl shadow-xl p-8 border border-gray-100">
+                        <div class="flex justify-center mb-6">
+                            <!-- Ícone de Escudo (Segurança) -->
+                            <svg class="w-24 h-24 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12 12 0 003 20.955a11.955 11.955 0 0018 0 12 12 0 00-2.382-8.971z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center mb-4">Chat Seguro de Validação</h3>
+                        <div class="space-y-3">
+                            <div class="bg-green-100 p-3 rounded-lg text-green-800 text-sm">
+                                <strong>Sistema:</strong> ⚠️ Antes de entregar, pergunte o "Detalhe Exclusivo".
+                            </div>
+                            <div class="bg-gray-200 p-3 rounded-lg text-gray-800 text-sm">
+                                <strong>Você (Encontrou):</strong> Olá! Você pode me dizer se esse pendrive tem algum
+                                detalhe
+                                único?
+                            </div>
+                            <div class="bg-gray-800 text-white p-3 rounded-lg text-sm">
+                                <strong>Dono (Perdeu):</strong> Sim! Ele tem um adesivo do Batman no verso, um pouco
+                                arranhado.
+                            </div>
+                            <div class="bg-green-100 p-3 rounded-lg text-green-800 text-sm font-bold">
+                                <strong>Sistema:</strong> ✅ Validação Correta! Podem combinar a entrega.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 5: O Futuro (Ideia de Escala) -->
+        <section id="futuro" class="bg-gray-50 py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-green-600 font-semibold tracking-wide uppercase">A Visão de Escala</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Do IFCE para o Mundo</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                        O IFCE Locker é o nosso projeto piloto. O futuro é o "Locker-as-a-Service" (LaaS) para outras
+                        instituições.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1: Universidades -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <svg class="w-16 h-16 text-green-600 mb-4 mx-auto" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                            <path
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14l9-5-9-5-9 5 9 5zm0 0v6l-9-3V6l9 3z"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-3">Universidades e Escolas</h3>
+                        <p class="text-gray-600">
+                            Vender a plataforma (white-label) para a UFC, UECE, Unifor e outras instituições de ensino.
+                        </p>
+                    </div>
+                    <!-- Card 2: Shoppings -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <svg class="w-16 h-16 text-green-600 mb-4 mx-auto" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-3">Shoppings e Comércios</h3>
+                        <p class="text-gray-600">
+                            Adaptar a solução para os balcões de "Achados e Perdidos" de centros comerciais e grandes
+                            lojas.
+                        </p>
+                    </div>
+                    <!-- Card 3: Eventos -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <svg class="w-16 h-16 text-green-600 mb-4 mx-auto" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5z">
+                            </path>
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-3">Grandes Eventos</h3>
+                        <p class="text-gray-600">
+                            Oferecer o sistema para conferências, shows e feiras, onde a perda de itens é muito comum e
+                            caótica.
+                        </se>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold text-white mb-2">IFCE Locker 🔎</h3>
+            <p class="mb-4">
+                Uma solução criada no Conecthon 2025 - Telecom Week.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
